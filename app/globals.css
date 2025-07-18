@@ -12,40 +12,43 @@
   --font-mono: var(--font-geist-mono);
 
   /* Core Theme Colors */
-  --color-primary: #71A5DE;
-  --color-secondary: #83B0E1;
-  --color-glass: #E1ECF7;
+  --color-primary: #13315c;
+  --color-secondary: #084b83;
+  --color-text: #102e4a;
+  --color-glass: #e1ecf7;
+
+  --color-accent-1: #71a5de;
+  --color-accent-2: #83b0e1;
 
   /* Twilight Palette (Blues → Purples) */
-  --twilight-blue-300: #76A7F4;
-  --twilight-blue-400: #6B8CE6;
-  --twilight-blue-500: #6071D7;
-  --twilight-blue-violet-400: #8671E1;
-  --twilight-violet-500: #AB71EB;
-  --twilight-violet-400: #B188EF;
-  --twilight-violet-300: #B69FF2;
-  --twilight-lavender-300: #BCB6F6;
-  --twilight-lavender-200: #C1CDF9;
+  --color-twilight-blue-300: #76a7f4;
+  --color-twilight-blue-400: #6b8ce6;
+  --color-twilight-blue-500: #6071d7;
+  --color-twilight-blue-violet-400: #8671e1;
+  --color-twilight-violet-500: #ab71eb;
+  --color-twilight-violet-400: #b188ef;
+  --color-twilight-violet-300: #b69ff2;
+  --color-twilight-lavender-300: #bcb6f6;
+  --color-twilight-lavender-200: #c1cdf9;
 
   /* Mint Palette (Mints → Sky → Periwinkle) */
-  --mint-mint-100: #84FFC9;
-  --mint-teal-100: #8AF2D2;
-  --mint-aqua-100: #91E5DB;
-  --mint-sky-100: #97D9E4;
-  --mint-sky-200: #9DCCED;
-  --mint-blue-200: #A4BFF6;
-  --mint-periwinkle-200: #AAB2FF;
+  --color-mint-mint-100: #84ffc9;
+  --color-mint-teal-100: #8af2d2;
+  --color-mint-aqua-100: #91e5db;
+  --color-mint-sky-100: #97d9e4;
+  --color-mint-sky-200: #9dcced;
+  --color-mint-blue-200: #a4bff6;
+  --color-mint-periwinkle-200: #aab2ff;
 
   /* Pastel Palette (Blue & Pink) */
-  --pastel-blue-100: #C9DEF4;
-  --pastel-blue-200: #D0DBEF;
-  --pastel-blue-300: #D8D8E9;
-  --pastel-blue-400: #DFD5E4;
-  --pastel-pink-100: #E6D2DF;
-  --pastel-pink-200: #EECFD9;
-  --pastel-pink-300: #F5CCD4;
+  --color-pastel-blue-100: #c9def4;
+  --color-pastel-blue-200: #d0dbef;
+  --color-pastel-blue-300: #d8d8e9;
+  --color-pastel-blue-400: #dfd5e4;
+  --color-pastel-pink-100: #e6d2df;
+  --color-pastel-pink-200: #eecfd9;
+  --color-pastel-pink-300: #f5ccd4;
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -57,5 +60,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }

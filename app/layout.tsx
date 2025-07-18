@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/sidebar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={` ${plusJakarta.className} antialiased`}>
+        <div className="relative flex min-h-screen bg-[#F2F7FF]">
+          <Sidebar className="absolute top-32 left-0 z-50" />
+          <main className="flex-1 p-6">{children}</main>
+        </div>
       </body>
     </html>
   );
 }
+//F2F7FF
+//EDF2FB
