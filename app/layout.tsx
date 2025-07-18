@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/sidebar";
+import ClientRoot from "./client-root";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -21,10 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${plusJakarta.className} antialiased`}>
-        <div className="relative flex min-h-screen bg-[#F2F7FF]">
-          <Sidebar className="absolute top-32 left-0 z-50" />
-          <main className="flex-1 p-6">{children}</main>
-        </div>
+        <ClientRoot>{children}</ClientRoot>
       </body>
     </html>
   );
