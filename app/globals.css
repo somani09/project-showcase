@@ -10,7 +10,42 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Core Theme Colors */
+  --color-primary: #71A5DE;
+  --color-secondary: #83B0E1;
+  --color-glass: #E1ECF7;
+
+  /* Twilight Palette (Blues → Purples) */
+  --twilight-blue-300: #76A7F4;
+  --twilight-blue-400: #6B8CE6;
+  --twilight-blue-500: #6071D7;
+  --twilight-blue-violet-400: #8671E1;
+  --twilight-violet-500: #AB71EB;
+  --twilight-violet-400: #B188EF;
+  --twilight-violet-300: #B69FF2;
+  --twilight-lavender-300: #BCB6F6;
+  --twilight-lavender-200: #C1CDF9;
+
+  /* Mint Palette (Mints → Sky → Periwinkle) */
+  --mint-mint-100: #84FFC9;
+  --mint-teal-100: #8AF2D2;
+  --mint-aqua-100: #91E5DB;
+  --mint-sky-100: #97D9E4;
+  --mint-sky-200: #9DCCED;
+  --mint-blue-200: #A4BFF6;
+  --mint-periwinkle-200: #AAB2FF;
+
+  /* Pastel Palette (Blue & Pink) */
+  --pastel-blue-100: #C9DEF4;
+  --pastel-blue-200: #D0DBEF;
+  --pastel-blue-300: #D8D8E9;
+  --pastel-blue-400: #DFD5E4;
+  --pastel-pink-100: #E6D2DF;
+  --pastel-pink-200: #EECFD9;
+  --pastel-pink-300: #F5CCD4;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
