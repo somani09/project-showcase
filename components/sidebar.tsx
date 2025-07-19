@@ -13,8 +13,8 @@ interface SidebarProps {
 }
 
 const navItems = [
-  { label: "Projects", href: "/projects" },
   { label: "Portfolio", href: "https://somani09.github.io/portfolio/" },
+  { label: "Projects", href: "/projects" },
 ];
 
 const sidebarContainerClasses = cn(
