@@ -6,7 +6,7 @@ import { projectCardConfig } from "./config";
 
 const ProjectsPage = () => {
   return (
-    <div className="px-32 py-12">
+    <div className="flex h-max min-h-screen flex-col pt-12 pr-4 pb-6 pl-32 sm:pr-32">
       <h1 className="text-primary text-6xl font-bold">Projects</h1>
 
       <p className="text-secondary mt-6 max-w-xl text-lg">
