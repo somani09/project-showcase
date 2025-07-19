@@ -8,14 +8,16 @@ interface ProjectCardProps {
   image: string;
   title: string;
   description: string;
+  link?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   title,
   description,
+  link,
 }) => {
-  return (
+  const cardContent = (
     <div
       className={cn(
         "group border-primary/20 bg-glass/10 relative h-[200px] w-[300px] cursor-pointer overflow-hidden rounded-xl border backdrop-blur-[2px]",
@@ -44,6 +46,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </p>
       </div>
     </div>
+  );
+
+  return link ? (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Open ${title} in new tab`}
+    >
+      {cardContent}
+    </a>
+  ) : (
+    cardContent
   );
 };
 
