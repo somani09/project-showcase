@@ -27,5 +27,3 @@ export default function RootLayout({
     </html>
   );
 }
-//F2F7FF
-//EDF2FB

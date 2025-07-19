@@ -9,10 +9,12 @@ export default function ClientRoot({
 }: {
   children: React.ReactNode;
 }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  //F2F7FF
+  //EDF2FB
 
   return (
-    <div className="relative flex min-h-screen bg-[#F2F7FF]">
+    <div className="relative flex min-h-screen bg-[#EDF2FB]">
       <button
         onClick={() => setSidebarOpen(true)}
         className={cn(
