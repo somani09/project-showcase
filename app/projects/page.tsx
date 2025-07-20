@@ -1,18 +1,49 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "./cards";
-import { projectCardConfig } from "./config";
+import { pageConfig, projectCardConfig } from "./config";
+import { cn } from "../utils";
 
 const ProjectsPage = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div className="flex h-max min-h-screen flex-col pt-12 pr-4 pb-6 pl-32 sm:pr-32">
+    <div className="flex h-max min-h-screen flex-col px-8 pt-12 sm:pl-32 md:pr-32">
       <h1 className="text-primary text-6xl font-bold">Projects</h1>
 
-      <p className="text-secondary mt-6 max-w-xl text-lg">
-        A collection of personal and professional projects showcasing design,
-        development, and creative problem solving.
-      </p>
+      <div className="text-secondary relative mt-6 text-sm sm:text-lg">
+        {/* Small screens only — collapsible */}
+        <div className="sm:hidden">
+          <div
+            className={cn(
+              "relative transition-[max-height] duration-500 ease-in-out",
+              isExpanded ? "overflow-visible" : "overflow-hidden",
+            )}
+            style={{
+              maxHeight: isExpanded ? "none" : "2.5rem",
+            }}
+          >
+            <p>{pageConfig.description}</p>
+            {!isExpanded && (
+              <div className="pointer-events-none absolute bottom-0 left-0 h-8 w-full bg-gradient-to-t from-white to-transparent" />
+            )}
+          </div>
+          <div className="mt-1 flex justify-end">
+            <button
+              className="text-primary text-xs font-semibold underline"
+              onClick={() => setIsExpanded((prev) => !prev)}
+            >
+              {isExpanded ? "Read less ↑" : "Read more ↓"}
+            </button>
+          </div>
+        </div>
+
+        {/* Larger screens only — always fully visible */}
+        <div className="hidden sm:block">
+          <p>{pageConfig.description}</p>
+        </div>
+      </div>
 
       <div className="bg-accent-1 mt-4 mb-8 h-0.5 max-w-xl rounded-full" />
 

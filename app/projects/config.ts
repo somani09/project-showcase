@@ -1,3 +1,9 @@
+export const pageConfig = {
+  title: "Projects",
+  description:
+    "A curated showcase of my personal and professional work — highlighting full-stack applications, UI/UX experiments, open-source tools, and creative problem-solving across real-world challenges. Each project reflects a blend of thoughtful design, technical depth, and an emphasis on clean, scalable architecture.",
+};
+
 export const projectCardConfig = [
   {
     title: "Artfolio",

@@ -14,14 +14,15 @@ export default function ClientRoot({
   //EDF2FB
 
   return (
-    <div className="bg-glass/50 relative flex h-max min-h-screen">
+    <div className="bg-glass/50 relative flex h-max">
       <button
         onClick={() => setSidebarOpen(true)}
         className={cn(
-          "absolute top-[161px] left-[34px] z-50 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full",
+          "z-50 flex h-16 w-16 items-center justify-center rounded-full",
           "bg-glass/20 border-primary/10 border-2 backdrop-blur-[6px]",
           shadowDepthPrimary,
           "translate-z-0 transition-opacity duration-300 ease-in-out will-change-[opacity]",
+          "fixed bottom-2 left-2 sm:top-[161px] sm:bottom-auto sm:left-[34px]",
           sidebarOpen ? "pointer-events-none opacity-0" : "opacity-100",
         )}
       >
@@ -34,7 +35,8 @@ export default function ClientRoot({
 
       <div
         className={cn(
-          "absolute top-32 left-0 z-50 origin-[64px_64px] transition-transform duration-300 ease-in-out",
+          "fixed left-0 z-50 origin-[30px_calc(100%-30px)] transition-transform duration-300 ease-in-out sm:origin-[64px_64px]",
+          "bottom-2 sm:top-32 sm:bottom-auto",
           sidebarOpen
             ? "pointer-events-auto visible scale-100"
             : "pointer-events-none scale-0",
