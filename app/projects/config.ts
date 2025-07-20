@@ -19,4 +19,11 @@ export const projectCardConfig = [
     image: "/stage-flow-funnel.jpg",
     link: "https://stage-flow-funnel.vercel.app/",
   },
+  {
+    title: "Tanstack table on Steroids",
+    description:
+      "A feature-rich data table with column pinning, drag-and-drop reordering, sorting, and row selection, built with TanStack Table, @dnd-kit, and Tailwind CSS.",
+    image: "/table.jpg",
+    link: "https://tanstack-table-on-steroids.vercel.app/",
+  },
 ];
