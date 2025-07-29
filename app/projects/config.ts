@@ -6,6 +6,12 @@ export const pageConfig = {
 
 export const projectCardConfig = [
   {
+    title: "Somani Music",
+    description: "A site to house my music",
+    image: "/somani-music.jpg",
+    link: "https://somani09.github.io/SomaniMusicReact/",
+  },
+  {
     title: "Artfolio",
     description:
       "A community-driven portfolio built with Next.js, SSR, SSG, and Unsplash API integration.",
